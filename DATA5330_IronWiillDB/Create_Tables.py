@@ -1,14 +1,3 @@
-import psycopg2
-
-dmconn = psycopg2.connect(
-    database="iwdm", 
-    user='tyler', 
-    password='goaggies1234',
-    host='tylerdata5330.cbg3gavcvfmn.us-west-2.rds.amazonaws.com', 
-    port= '5432'
-)
-cursor = dmconn.cursor()
-
 #CREATE "nfl_team" TABLE:
 cursor.execute('''CREATE TABLE IF NOT EXISTS nfl_team (team_name VARCHAR(30) PRIMARY KEY,
     team_name_short VARCHAR(10),
